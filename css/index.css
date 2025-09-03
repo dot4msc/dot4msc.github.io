@@ -1,5 +1,22 @@
-html {
-  background-color: #1e1e1e;
-  background-size: 33%; 
+
+.hero {
+  background-image: url("../img/WWISGAF_PAGE.png");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header {
+  font-size: 5rem;
+  width: 60%;
+  margin: auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+  line-height: 1.2;
 }
