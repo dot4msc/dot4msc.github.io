@@ -1,3 +1,6 @@
+html {
+  background: linear-gradient(to bottom, #1e1e1e, #0f1114);
+}
 
 .hero {
   background-image: url("../img/WWISGAF_PAGE.png");
@@ -19,4 +22,42 @@
   box-sizing: border-box;
   vertical-align: middle;
   line-height: 1.2;
+}
+
+.about-header {
+  font-size: 3rem;
+}
+
+.about-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px auto;
+  margin-right: 20px;
+}
+
+.about-pic {
+  display: block;
+  margin: 0 auto;
+  grid-column: 1;
+  width: 50%;
+  align-self: center;
+  border-radius: 20px; /* space inside */
+  background: linear-gradient(to left, #7575f3, #e6faf0 , #f17474) border-box; /* border gradient */
+  border: 8px solid transparent;
+}
+
+.about-section {
+  grid-column: 2;
+  background-color: #181818;
+  border-radius: 20px;
+  border: solid 3px #E0E0E0;
+}
+
+.about-description, .about-header {
+  margin: 60px;
+}
+
+.about-description{
+  text-align: justify;
+  line-height: 1.5;
 }
