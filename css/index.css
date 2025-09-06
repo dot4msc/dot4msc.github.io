@@ -61,3 +61,38 @@ html {
   text-align: justify;
   line-height: 1.5;
 }
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    background-size: 90%;
+    height: 90vh;
+    background-position: top;
+  }
+
+  .header {
+    font-size: 4rem;
+    width: 90%;
+  }
+
+  .about-main {
+    grid-template-columns: 1fr;
+    margin: 30px auto;
+  }
+  
+  .about-pic, .about-section {
+    grid-column: 1;
+  }
+  
+  .about-pic {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  
+  .about-section {
+    margin: 20px 10px;
+  }
+  .about-description, .about-header {
+    margin: 20px;
+  }
+  
+}
