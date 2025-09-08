@@ -81,6 +81,10 @@ html {
 #x-icon {
   width: 20%;
 }
+#soundcloud-icon {
+  width: 20%;
+  margin-bottom: 40px;
+}
 
 @media only screen and (max-width: 768px) {
   .hero {
@@ -116,4 +120,8 @@ html {
     margin: 20px;
   }
   
+  #soundcloud-icon {
+    width: 20%;
+    margin-bottom: 25px;
+  }
 }
