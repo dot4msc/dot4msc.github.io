@@ -86,6 +86,34 @@ html {
   margin-bottom: 40px;
 }
 
+.blog {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.blog-content {
+  background-color: #181818;
+  border-radius: 20px;
+  border: solid 3px #E0E0E0;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.blog-title {
+  text-align: center;
+}
+
+.blog-date {
+  margin-left: 50px;
+  box-sizing: border-box;
+  font-style: italic;
+}
+
+.blog-text {
+  margin: 20px 50px;
+  text-align: justify;
+  line-height: 1.5;
+}
 @media only screen and (max-width: 768px) {
   .hero {
     background-size: 100%;
