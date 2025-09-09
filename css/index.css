@@ -86,7 +86,7 @@ html {
   margin-bottom: 40px;
 }
 
-.blog {
+#blog {
   width: 80%;
   margin: 50px auto;
 }
@@ -107,6 +107,7 @@ html {
   margin-left: 50px;
   box-sizing: border-box;
   font-style: italic;
+  margin-top: 10px;
 }
 
 .blog-text {
@@ -114,6 +115,11 @@ html {
   text-align: justify;
   line-height: 1.5;
 }
+
+.blog-text p {
+  margin-bottom: 15px;
+}
+
 @media only screen and (max-width: 768px) {
   .hero {
     background-size: 100%;
@@ -151,5 +157,10 @@ html {
   #soundcloud-icon {
     width: 20%;
     margin-bottom: 25px;
+  }
+
+  .blog-title, .blog-date, .blog-text {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
