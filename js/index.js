@@ -16,20 +16,24 @@ fetch('./blog-posts/posts.json').then(response => {
   let blogTitle = document.createElement('h2');
   let blogDate = document.createElement('p');
   let blogText = document.createElement('p');
-  
+  let blogSong = document.createElement('div');
+
   blogPost.className = 'blog-post';
   blogContent.className = 'blog-content';
   blogTitle.className = 'blog-title';
   blogDate.className = 'blog-date';
   blogText.className = 'blog-text';
-  
+  blogSong.className = 'blog-song';
+
   blogText.innerHTML = firstPost["text"];
   blogTitle.innerText = firstPost["title"];
   blogDate.innerText = firstPost["date"];
-  
+  blogSong.innerHTML = firstPost["song"];
+
   blogContent.appendChild(blogTitle);
   blogContent.appendChild(blogDate);
   blogContent.appendChild(blogText);
+  blogContent.appendChild(blogSong);
   
   blogPost.appendChild(blogContent);
   blogDocument.appendChild(blogPost);

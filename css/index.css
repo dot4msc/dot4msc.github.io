@@ -120,6 +120,12 @@ html {
   margin-bottom: 15px;
 }
 
+.blog-song {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 @media only screen and (max-width: 768px) {
   .hero {
     background-size: 100%;
@@ -162,5 +168,9 @@ html {
   .blog-title, .blog-date, .blog-text {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .blog-song iframe {
+    width: 100%;
   }
 }
