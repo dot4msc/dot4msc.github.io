@@ -15,7 +15,7 @@ fetch('./blog-posts/posts.json').then(response => {
   let blogContent = document.createElement('div');
   let blogTitle = document.createElement('h2');
   let blogDate = document.createElement('p');
-  let blogText = document.createElement('p');
+  let blogText = document.createElement('div');
   let blogSong = document.createElement('div');
 
   blogPost.className = 'blog-post';
@@ -34,7 +34,7 @@ fetch('./blog-posts/posts.json').then(response => {
   blogContent.appendChild(blogDate);
   blogContent.appendChild(blogText);
   blogContent.appendChild(blogSong);
-  
+
   blogPost.appendChild(blogContent);
   blogDocument.appendChild(blogPost);
 })
