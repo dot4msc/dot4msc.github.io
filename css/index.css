@@ -198,6 +198,16 @@ html {
     margin-bottom: 25px;
   }
 
+  #instagram-icon {
+    width: 12.5%;
+    margin-bottom: 15px;
+  }
+
+  #tiktok-icon {
+    width: 12.5%;
+    margin-bottom: 15px;
+  }
+
   .blog-title, .blog-date, .blog-text {
     margin-left: 5px;
     margin-right: 5px;
