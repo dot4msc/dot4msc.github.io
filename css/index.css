@@ -24,6 +24,38 @@ html {
   line-height: 1.2;
 }
 
+.hero-link {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #181818;
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 20px 500px;
+  padding: 10px;
+  background-color: #E0E0E0;
+  border: solid 3px #E0E0E0;
+}
+
+.archive-link {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #181818;
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 20px 400px;
+  padding: 10px;
+  background-color: #E0E0E0;
+  border: solid 3px #E0E0E0;
+}
+.hero-link:hover {
+  background-color: transparent;
+  color: #A93226;
+  border: solid 3px #E0E0E0;
+}
 .about-header {
   font-size: 3rem;
 }
