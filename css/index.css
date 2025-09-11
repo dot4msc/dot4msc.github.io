@@ -51,6 +51,7 @@ html {
   background-color: #E0E0E0;
   border: solid 3px #E0E0E0;
 }
+
 .hero-link:hover {
   background-color: transparent;
   color: #A93226;
@@ -204,5 +205,9 @@ html {
 
   .blog-song iframe {
     width: 100%;
+  }
+
+  .hero-link {
+    margin: 20px 100px;
   }
 }
