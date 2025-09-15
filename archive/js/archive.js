@@ -26,7 +26,7 @@ fetch('../blog-posts/posts.json').then(response => {
     blogText.className = 'blog-text';
     blogSong.className = 'blog-song';
   
-    blogText.innerHTML = post["text"];
+    blogText.innerHTML = post["post"];
     blogTitle.innerText = post["title"];
     blogDate.innerText = post["date"];
     blogSong.innerHTML = post["song"];
