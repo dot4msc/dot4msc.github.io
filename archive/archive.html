@@ -16,5 +16,26 @@
     
   </div>
   <script src="./js/archive.js"></script>
+  <script>
+    function scrollToHash() {
+      if (window.location.hash) {
+        const el = document.querySelector(window.location.hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+          return true;
+        }
+      }
+      return false;
+    }
+    if (!scrollToHash()) {
+      const observer = new MutationObserver(() => {
+        if (scrollToHash()) {
+          observer.disconnect();
+        }
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
+</script>
+
 </body>
 </html>

@@ -7,7 +7,6 @@ fetch('../blog-posts/posts.json').then(response => {
   return response.json();
 }).then(data => {
   let blogPosts = data.posts;
-  console.log(blogPosts);
   let followingPosts = blogPosts.slice(1);
 
   followingPosts.forEach(post => {
@@ -30,6 +29,7 @@ fetch('../blog-posts/posts.json').then(response => {
     blogTitle.innerText = post["title"];
     blogDate.innerText = post["date"];
     blogSong.innerHTML = post["song"];
+    blogContent.id = post["id"];
 
     blogContent.appendChild(blogTitle);
     blogContent.appendChild(blogDate);
