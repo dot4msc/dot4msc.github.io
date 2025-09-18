@@ -17,7 +17,7 @@ fetch('../blog-posts/posts.json').then(response => {
     let blogDate = document.createElement('p');
     let blogText = document.createElement('div');
     let blogSong = document.createElement('div');
-  
+    
     blogPost.className = 'blog-post';
     blogContent.className = 'blog-content';
     blogTitle.className = 'blog-title';

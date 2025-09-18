@@ -1,4 +1,5 @@
 let blogDocument = document.getElementById('blog');
+const SERVER_URL = 'http://localhost:3000';
 
 fetch('./blog-posts/posts.json').then(response => {
   if(!response.ok) {
@@ -17,6 +18,45 @@ fetch('./blog-posts/posts.json').then(response => {
   let blogText = document.createElement('div');
   let blogSong = document.createElement('div');
 
+  let blogUsername = document.createElement('input');
+  blogUsername.type = 'text';
+  blogUsername.placeholder = 'Your name (optional)';;
+  let blogCommentBox = document.createElement('textarea');
+  blogCommentBox.placeholder = 'Leave a comment...';
+  let blogCommentButton = document.createElement('button');
+  blogCommentButton.innerText = 'Post Comment';
+  let blogCommentSection = document.createElement('div');
+
+  blogCommentButton.onclick = function(e){
+    e.preventDefault();
+    if(blogCommentBox.value.trim() === ''){
+      alert("Please add a comment if you want to send it... don't be a d*ck!");
+      return;
+    }
+
+    let comment = blogCommentBox.value.trim();
+    let username = blogUsername.value.trim() || 'Anonymous';
+
+    let bodyData = {username, comment, postId: firstPost["id"],};
+
+    fetch(SERVER_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: json.stringify(bodyData),
+    }).then(response => {
+      if(!response.ok){
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+  }
+
+  blogUsername.className = 'blog-username';
+  blogCommentBox.className = 'blog-comment-box';
+  blogCommentButton.className = 'blog-comment-button';
+  blogCommentSection.className = 'blog-comment-section';
   blogPost.className = 'blog-post';
   blogContent.className = 'blog-content';
   blogTitle.className = 'blog-title';
@@ -30,11 +70,16 @@ fetch('./blog-posts/posts.json').then(response => {
   blogSong.innerHTML = firstPost["song"];
   blogContent.id = firstPost["id"];
 
+  blogCommentSection.appendChild(blogUsername);
+  blogCommentSection.appendChild(blogCommentBox);
+  blogCommentSection.appendChild(blogCommentButton);
+  
   blogContent.appendChild(blogTitle);
   blogContent.appendChild(blogDate);
   blogContent.appendChild(blogText);
   blogContent.appendChild(blogSong);
-
+  blogContent.appendChild(blogCommentSection);
+  
   blogPost.appendChild(blogContent);
   blogDocument.appendChild(blogPost);
 })

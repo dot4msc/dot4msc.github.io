@@ -159,6 +159,56 @@ html {
   margin-top: 20px;
 }
 
+.blog-comment-section {
+  margin-top: 30px;
+  border-top: solid 2px #E0E0E0;
+  padding-top: 20px;
+}
+
+.blog-username {
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: solid 2px #E0E0E0;
+  background-color: #1e1e1e;
+}
+
+.blog-comment-box {
+  width: 80%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: solid 2px #E0E0E0;
+  background-color: #1e1e1e;
+  resize: vertical;
+}
+
+.blog-comment-button {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #A93226;
+  color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-weight: 500;
+
+}
+
+.blog-comment-button:hover {
+  background-color: #811734;
+}
+
+.blog-comment-button:active {
+  background-color: #cd7b4c;
+  font-weight: 700;
+}
+.blog-username, .blog-comment-box, .blog-comment-button {
+  margin-top: 10px;
+}
 @media only screen and (max-width: 768px) {
   .hero {
     background-size: 100%;
