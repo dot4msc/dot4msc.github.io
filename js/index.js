@@ -1,5 +1,5 @@
 let blogDocument = document.getElementById('blog');
-const SERVER_URL = 'http://localhost:3000';
+const SERVER_URL = 'https://dot4msc-blog-server.onrender.com/';
 
 fetch('./blog-posts/posts.json').then(response => {
   if(!response.ok) {
@@ -44,10 +44,19 @@ fetch('./blog-posts/posts.json').then(response => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: json.stringify(bodyData),
+      body: JSON.stringify(bodyData),
     }).then(response => {
       if(!response.ok){
+        alert("Server is down at the moment, please send your comment through Instagram to @dot4music as a DM if problem persists. Sorry :(");
         throw new Error('Network response was not ok');
+
+      }
+      
+      if(username.toLowerCase() === 'lambda'){
+        alert("Thanks dear,ILYSM and your secret is safe with me 🤫♥️");
+      }
+      else{
+        alert("Thank you " + username + ". Nano has received your comment ♥️");
       }
       return response.json();
     })
